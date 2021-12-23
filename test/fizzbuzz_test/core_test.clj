@@ -3,11 +3,9 @@
             [fizzbuzz-test.core :refer :all]))
 
 (deftest fizzbuzz-test
-  (testing "1を渡すと文字列1を返す" ;←"数を文字列に変換する"
-    ;; 準備 3
-    ;; 実行 2
-    (let [actual (fizzbuzz 1)]
-    ;; 検証 1
-      (is (= "1" actual)))
+  (testing "1を渡すと文字列1を返す"
+    ;; 準備 
+    ;; 実行 ＆ 検証 
+    (is (= "1" (fizzbuzz 1)))
     ;; 後片付け
     ))
