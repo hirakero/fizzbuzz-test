@@ -2,5 +2,6 @@
   (:gen-class))
 
 (defn fizzbuzz [n]
-  (str n))
-
+  (if (zero? (mod n 3))
+    "Fizz"
+    (str n)))
