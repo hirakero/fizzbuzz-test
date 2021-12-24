@@ -9,6 +9,8 @@
     (is (= "2" (fizzbuzz 2))))
   (testing "3を渡すと文字列Fizzを返す"
     (is (= "Fizz" (fizzbuzz 3))))
+  (testing "5を渡すと文字列Buzzを返す"
+    (is (= "Buzz" (fizzbuzz 5))))
   )
 
 (use-fixtures :once

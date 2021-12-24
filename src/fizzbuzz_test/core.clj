@@ -4,4 +4,6 @@
 (defn fizzbuzz [n]
   (if (zero? (mod n 3))
     "Fizz"
-    (str n)))
+    (if (zero? (mod n 5))
+      "Buzz"
+      (str n))))
