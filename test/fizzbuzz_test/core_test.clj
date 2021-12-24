@@ -10,6 +10,9 @@
     (testing "5の倍数のときは、数の代わりに「Buzz」と変換する"
       (testing "5を渡すと文字列Buzzを返す"
         (is (= "Buzz" (fizzbuzz 5)))))
+    (testing "3と5の倍数のときは、数の代わりに「FizzBuzz」と変換する"
+      (testing "15を渡すと文字列FizzBuzzを返す"
+        (is (= "FizzBuzz" (fizzbuzz 15)))))
     (testing "その他の数のときは、そのまま数を文字列に変換する"
       (testing "1を渡すと文字列1を返す"
         (is (= "1" (fizzbuzz 1))))))
