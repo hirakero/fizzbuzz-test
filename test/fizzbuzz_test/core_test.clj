@@ -3,24 +3,14 @@
             [fizzbuzz-test.core :refer :all]))
 
 (deftest fizzbuzz-test
-  (testing "1を渡すと文字列1を返す"
-    (is (= "1" (fizzbuzz 1))))
-  (testing "2を渡すと文字列2を返す"
-    (is (= "2" (fizzbuzz 2))))
-  (testing "3を渡すと文字列Fizzを返す"
-    (is (= "Fizz" (fizzbuzz 3))))
-  (testing "5を渡すと文字列Buzzを返す"
-    (is (= "Buzz" (fizzbuzz 5))))
+  (testing "fizzbuzzは、数を文字列に変換する"
+    (testing "3の倍数のときは、数の代わりに「Fizz」と変換する"
+      (testing "3を渡すと文字列Fizzを返す"
+        (is (= "Fizz" (fizzbuzz 3)))))
+    (testing "5の倍数のときは、数の代わりに「Buzz」と変換する"
+      (testing "5を渡すと文字列Buzzを返す"
+        (is (= "Buzz" (fizzbuzz 5)))))
+    (testing "その他の数のときは、そのまま数を文字列に変換する"
+      (testing "1を渡すと文字列1を返す"
+        (is (= "1" (fizzbuzz 1))))))
   )
-
-(use-fixtures :once
-  (fn [test-fn]
-    (println "pre-once")
-    (test-fn)
-    (println "post-once")))
-
-(use-fixtures :each
-  (fn [test-fn]
-    (println "pre-each")
-    (test-fn)
-    (println "post-each")))
